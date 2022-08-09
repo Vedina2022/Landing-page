@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Migiya</title>
+    <style>
+      .container {
+        background-color: #f5e1da;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 30px 60px;
+        border-radius: 8px;
+      }
+      body {
+        margin: 40px 0;
+        background-color: #f5eeec;
+      }
+      h1 {
+        display: block;
+        text-align: center;
+        color: #1dad9b;
+        font-size: 36px;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        border: 1px solid #1dad9b;
+        border-radius: 6px;
+        padding: 15px;
+      }
+      h2 {
+        text-align: center;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        font-size: 28px;
+        max-width: 100%;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        border-radius: 10px;
+      }
+      hr {
+        border: 0.5px solid #1dad9b;
+        display: block;
+        unicode-bidi: isolate;
+        overflow: hidden;
+      }
+      p {
+        line-height: 1.5;
+        font-size: 21px;
+        margin: 20px 0 10px;
+      }
+      button {
+        display: block;
+        margin: 10px auto;
+        background: #00aaa0;
+        color: white;
+        font-size: 20px;
+        line-height: 1.5;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        padding: 15px 20px;
+        border: none;
+        border-radius: 20px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        transition: all 200ms ease-in-out;
+        letter-spacing: 2px;
+      }
+      button:hover {
+        opacity: 0.9;
+        cursor: pointer;
+      }
+      .learn-more {
+        display: block;
+        margin-top: 12px;
+        text-decoration: none;
+        color: #085f63;
+        font-size: 20px;
+      }
+      .learn-more:hover {
+        text-decoration: underline;
+      }
+      .footer {
+        text-align: center;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        font-size: 17px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>I love the place where I grew up</h1>
+      <h2>Especially the nature of our region</h2>
+      <hr />
+      <img
+        src="https://tamtour.com.ua/local/image/342/009/wikipedia-vechir-na-integrali-richka-pivdenniy-bug-1024x682.jpg"
+        alt="Migiya"
+        width="500"
+      />
+      <hr />
+      <p>
+        <strong>Migiya</strong> is a village in Pervomaiskyi Raion, Mykolaiv
+        Oblast, Ukraine. Migiya is a real mountain country among the steppes.
+        International kayak and rafting competitions are held on the Migiya
+        rapids, as the kayak route ranks 2nd in Ukraine in terms of the
+        difficulty of ascent. Migia became the winner of the international
+        interactive competition "Wonders of the Lands of St. Nicholas".
+      </p>
+      <a
+        href="https://uk-m-wikipedia-org.translate.goog/wiki/%D0%9C%D0%B8%D0%B3%D1%96%D1%8F?_x_tr_sl=uk&_x_tr_tl=en&_x_tr_hl=ru&_x_tr_pto=sc"
+        target="_blank"
+        class="learn-more"
+        >Learn more on Wikipedia
+      </a>
+      <button class="visit-button">Visit Migiya</button>
+      <p class="footer">
+        This page was built by
+        <a
+          href="https://www.linkedin.com/in/nadiia-kyshinska-8aa342168"
+          target="_blank"
+          >Nadiia Kyshinska</a
+        >
+      </p>
+    </div>
+    <script>
+      function visit() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email adress?");
+        let country = prompt("What country are you from?");
+        country = country.toLowerCase();
+        country = country.trim();
+        if (country === "ukraine") {
+          alert(
+            "Дякуємо, " +
+              name +
+              "! Щиро раді запропонувати вам відпочинок, що подарує незабутні враження від прекрасних краєвидів нашого краю💙💛"
+          );
+        } else {
+          alert(
+            "Thank you, " +
+              name +
+              "! We are sincerely glad to offer you a vacation in the beautiful nature of our region💙💛"
+          );
+        }
+      }
+      let visitButton = document.querySelector(".visit-button");
+      visitButton.addEventListener("click", visit);
+    </script>
+  </body>
+</html>
